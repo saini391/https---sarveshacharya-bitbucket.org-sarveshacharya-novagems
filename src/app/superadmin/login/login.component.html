@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Login</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  
+  <link rel="stylesheet" type="text/css" href="/assets/css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/framework.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/washington.css">
+
+  <script type="text/javascript" src="/assets/js/modernizr.js"></script>
+  <link rel="shortcut icon" type="image/x-icon" href="/assets/images/logoStandford32.ico">
+  <link rel="apple-touch-icon" href="/assets/images/logoStandford32.ico">
+
+  <link href="/assets/css/ionicons.min.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <section class="w-section mobile-wrapper">
+
+    <div class="page-content" id="main-stack" data-scroll="0">
+      <div class="w-nav navbar"></div>
+      <div class="body padding">
+        <div class="logo-login"></div>
+        <div class="bottom-section padding">
+          <div class="w-form">
+             <p align=center>{{error}}</p>
+            <form id="submit-form" name="email-form" data-name="Email Form" action="#">
+              <div>
+                <label class="label-form" for="email-field">USERNAME</label>
+                <input class="w-input input-form" id="email-field" type="email" [(ngModel)] = "email" name="email" data-name="email" required="required">
+                <div class="separator-fields"></div>
+              </div>
+              <div>
+                <label class="label-form" for="email">PASSWORD</label>
+                <div class="w-clearfix block-input-combined">
+                  <input class="w-input input-form left" id="password-field" [(ngModel)] = "password" type="password" name="password" data-name="password" required="required"><a class="right-input-link" href="forgot.html" data-load="1">Forgot Password</a>
+                </div>
+                <div class="separator-button-input"></div>
+              </div>
+              <input class="w-button action-button" type="button" (click)="UserLogin()" value="Sign In" data-wait="Please wait...">
+              <div class="separator-button"></div><a class="link-upper" routerLink="/signup" data-load="1">YOU DON’T HAVE AN ACCOUNT? <strong class="b-link">SIGN UP</strong></a>
+             
+            </form>           
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </section>
+  <script type="text/javascript" src="/assets/js/jquery.min.js"></script>
+  <script type="text/javascript" src="/assets/js/framework.js"></script>
+  <!--[if lte IE 9]><script src="js/placeholders.min.js"></script><![endif]-->
+</body>
+</html>
